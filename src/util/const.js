@@ -43,6 +43,10 @@ exports.ERROR_CODE = {
   }
 };
 
+exports.USER_TYPE = {
+  ADMIN: 1
+};
+
 exports.METHOD = {
   GET: 1,
   POST: 2,
