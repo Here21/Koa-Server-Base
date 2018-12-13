@@ -1,7 +1,7 @@
 exports.ERROR_CODE = {
   SYSTEM_ERROR: 1000,
   MOBILE_ALREADY_TOOK: 1001,
-  LOGIN_NAME_ALREADY_TOOK: 1002,
+  ACCOUNT_ALREADY_TOOK: 1002,
   EMAIL_ALREADY_TOOK: 1003,
   VERIFY_SMS_CODE_FAILED: 1004,
   REQUIRE_MORE_PARAMS: 1005,
@@ -22,7 +22,7 @@ exports.ERROR_CODE = {
   DESC: {
     1000: '系统错误',
     1001: '手机 已占用',
-    1002: '登陆名 已占用',
+    1002: '账号 已占用',
     1003: '邮箱 已占用',
     1004: '校验短信验证码过程出错',
     1005: '参数不足',
