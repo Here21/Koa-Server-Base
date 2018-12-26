@@ -17,7 +17,7 @@ global.rootDir = `${path.resolve(__dirname)}/`;
 
 app.use(serve(path.join(__dirname, '../public')));
 app.use(cors({
-  Origin: '*',
+  origin: '*',
   allowMethods: ['GET', 'POST'],
   maxAge: 86400
 }));
