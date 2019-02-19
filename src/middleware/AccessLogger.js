@@ -1,7 +1,14 @@
+/**
+ * @Description: 默认不开启api记录，如有需要，解开有关apiDao的三行注释即可
+ * @author Martin
+ * @date 2019-02-19
+ */
+
 const _ = require('lodash');
 const logger = require('../util/logger');
+// const apiDao = require('../util/apiDao');
 
-module.exports = async(ctx, next) => {
+module.exports = async (ctx, next) => {
   logger.debug('[%s]: %s', ctx.method, ctx.url);
   const start = Date.now();
   const params = {
@@ -21,8 +28,11 @@ module.exports = async(ctx, next) => {
   }
   // 记录access log
   // sql insert
+  // const id = await apiDao.add(params);
   await next();
   const ms = Date.now() - start;
+
   // 更新access log
   // sql update ms
+  // apiDao.update({ during: ms }, { id });
 };
